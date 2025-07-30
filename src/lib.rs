@@ -142,8 +142,9 @@ pub enum Error {
 }
 
 impl Error {
+    /// Error description string
     #[inline]
-    fn description_str(&self) -> &'static str {
+    pub fn description_str(&self) -> &'static str {
         match *self {
             Error::HeaderName => "invalid header name",
             Error::HeaderValue => "invalid header value",
